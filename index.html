@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>高二中文考試複習</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="複習分類">
+        <div class="brand">
+          <span class="brand-mark">文</span>
+          <div>
+            <h1>中文考試複習</h1>
+            <p>名句 · 常识 · 课文 · 练习</p>
+          </div>
+        </div>
+        <nav id="categoryNav" class="category-nav"></nav>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">2025 学年下学期 · 高二级</p>
+            <h2 id="viewTitle">总览</h2>
+          </div>
+          <div class="tools">
+            <label class="search">
+              <span>搜</span>
+              <input id="searchInput" type="search" placeholder="搜尋：曹雪芹、三瘦詞人、離騷..." />
+            </label>
+            <div class="segmented" role="group" aria-label="顯示模式">
+              <button class="mode is-active" data-mode="highlight">螢光筆</button>
+              <button class="mode" data-mode="cloze">填空</button>
+              <button class="mode" data-mode="plain">閱讀</button>
+            </div>
+          </div>
+        </header>
+
+        <section class="hero-panel">
+          <div>
+            <p class="eyebrow">複習邏輯</p>
+            <h3>把「會考填空」的地方先照亮，再反覆遮住練。</h3>
+            <p>每個資料按段落顯示。黃色標記表示可能被抽成填充題、名詞解釋或選擇題判斷點的內容；切到「填空」模式後，點擊空格可臨時顯示答案。</p>
+            <button id="startQuiz" class="hero-action" type="button">開始測驗</button>
+          </div>
+          <div class="stats" id="stats"></div>
+        </section>
+
+        <section id="overview" class="overview-grid"></section>
+        <section id="content" class="content-list" hidden></section>
+      </main>
+    </div>
+
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
